@@ -189,8 +189,7 @@ public class WxCpServiceImpl implements WxCpService {
 
   @Override
   public void menuCreate(Integer agentId, WxMenu menu) throws WxErrorException {
-    String url = "https://qyapi.weixin.qq.com/cgi-bin/menu/create?agentid="
-      + this.configStorage.getAgentId();
+    String url = "https://qyapi.weixin.qq.com/cgi-bin/menu/create?agentid=" + agentId;
     post(url, menu.toJson());
   }
 
